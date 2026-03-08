@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Women's Day Gargi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3,#fad0c4);
+overflow:hidden;
+color:white;
+text-align:center;
+}
+
+/* container */
+
+.container{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:25px;
+width:90%;
+max-width:650px;
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+animation:fadeIn 2s ease;
+}
+
+/* image */
+
+img{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid white;
+margin-bottom:15px;
+}
+
+/* text */
+
+h1{
+font-size:36px;
+margin-bottom:5px;
+}
+
+h2{
+font-size:26px;
+margin-bottom:15px;
+}
+
+.message{
+font-size:17px;
+line-height:1.6;
+}
+
+/* button */
+
+button{
+margin-top:20px;
+padding:12px 28px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4f87;
+font-weight:600;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+/* surprise text */
+
+.special{
+margin-top:18px;
+font-size:18px;
+font-weight:500;
+}
+
+/* heart animation */
+
+.heart{
+position:absolute;
+color:white;
+animation:float 6s linear infinite;
+font-size:22px;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:1}
+100%{transform:translateY(-800px);opacity:0}
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="gargi.jpg">
+
+<h1>🌸 Happy Women's Day 🌸</h1>
+<h2>Gargi</h2>
+
+<p class="message">
+Today we celebrate strength, kindness, beauty and the incredible impact women have on the world.
+</p>
+
+<p class="message">
+Gargi, may you always shine with confidence, chase your dreams fearlessly and continue inspiring everyone around you.
+</p>
+
+<button onclick="showMessage()">Click for a Surprise 🎁</button>
+
+<p id="specialMessage" class="special"></p>
+
+</div>
+
+<!-- floating hearts -->
+
+<script>
+
+function showMessage(){
+document.getElementById("specialMessage").innerHTML =
+"You are strong, inspiring and truly special Gargi. Keep shining and making the world brighter 💐✨";
+}
+
+/* hearts animation */
+
+setInterval(function(){
+
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*20)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000)
+
+},500);
+
+</script>
+
+</body>
+</html>
